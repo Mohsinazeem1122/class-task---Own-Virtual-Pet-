@@ -15,6 +15,14 @@
         age: 3,
         happiness: 80,
         hunger: 80,
+
+        feed: function () {
+          this.hunger -= 20;
+          if (this.hunger < 0) {
+            this.hunger = 0;
+          }
+          alert(`${this.name} has been fed! Hunger is now ${this.hunger}.`);
+        },
       };
     </script>
   </body>
