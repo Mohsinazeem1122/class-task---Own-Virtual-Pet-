@@ -23,6 +23,14 @@
           }
           alert(`${this.name} has been fed! Hunger is now ${this.hunger}.`);
         },
+
+        play: function () {
+          this.happiness += 20;
+          if (this.happiness > 20) {
+            this.happiness = 20;
+          }
+          alert(`${this.name} is happy! Happiness is now ${this.happiness}`);
+        },
       };
     </script>
   </body>
