@@ -31,6 +31,23 @@
           }
           alert(`${this.name} is happy! Happiness is now ${this.happiness}`);
         },
+
+        age: function () {
+          this.age += 1;
+          this.happiness -= 5;
+          this.hunger += 0;
+
+          if (this.happiness < 0) {
+            this.happiness = 0;
+          }
+
+          if (this.hunger > 100) {
+            this.hunger = 100;
+          }
+          alert(
+            `${this.name} has aged! Age is now ${this.age}, Happiness is ${this.happiness}, Hunger is ${this.hunger}`
+          );
+        },
       };
     </script>
   </body>
