@@ -48,6 +48,29 @@
           `${petObj.name} has aged! Age is now ${petObj.age}, Happiness is ${this.happiness}, Hunger is ${this.hunger}`
         );
       };
+
+      function aboutPet() {
+        let action;
+        do {
+          action = prompt(
+            "What would you like to do with your pet?\n1. Feed\n2. Play\n3. Age\n4. Quit"
+          );
+
+          if (action === "1") {
+            petObj.feed();
+          } else if (action === "2") {
+            petObj.play();
+          } else if (action === "3") {
+            petObj.agePet();
+          } else if (action === "4") {
+            alert("Goodbye!");
+          } else {
+            alert("Please choose the correct action");
+          }
+        } while (action !== "4");
+      }
+
+      aboutPet();
     </script>
   </body>
 </html>
