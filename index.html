@@ -17,6 +17,37 @@
       petObj.age = +prompt("How old is your pet?");
       petObj.happiness = +prompt("How happy is your pet?");
       petObj.hunger = +prompt("How hungry is your pet?");
+
+      petObj.feed = function () {
+        this.hunger -= 20;
+        if (this.hunger < 0) {
+          this.hunger = 0;
+        }
+        alert(`${petObj.name} has been feed! Hunger is now ${this.hunger}`);
+      };
+
+      petObj.play = function () {
+        this.happiness += 20;
+        if (this.happiness > 100) {
+          this.happiness = 100;
+        }
+        alert(`${petObj.name} is happy! Happiness is now ${this.happiness}`);
+      };
+
+      petObj.agePet = function () {
+        petObj.age += 1;
+        this.happiness -= 5;
+        this.hunger += 10;
+        if (this.hunger < 0) {
+          this.hunger = 0;
+        }
+        if (this.happiness > 100) {
+          this.happiness = 100;
+        }
+        alert(
+          `${petObj.name} has aged! Age is now ${petObj.age}, Happiness is ${this.happiness}, Hunger is ${this.hunger}`
+        );
+      };
     </script>
   </body>
 </html>
