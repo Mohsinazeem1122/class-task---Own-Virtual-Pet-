@@ -6,55 +6,6 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>My virtual pet</h1>
-
-    <script>
-      let pet = {
-        name: "rex",
-        type: "dog",
-        age: 3,
-        happiness: 80,
-        hunger: 80,
-
-        feed: function () {
-          this.hunger -= 20;
-          if (this.hunger < 0) {
-            this.hunger = 0;
-          }
-          alert(`${this.name} has been fed! Hunger is now ${this.hunger}.`);
-        },
-
-        play: function () {
-          this.happiness += 20;
-          if (this.happiness > 20) {
-            this.happiness = 20;
-          }
-          alert(`${this.name} is happy! Happiness is now ${this.happiness}`);
-        },
-
-        age: function () {
-          this.age += 1;
-          this.happiness -= 5;
-          this.hunger += 0;
-
-          if (this.happiness < 0) {
-            this.happiness = 0;
-          }
-
-          if (this.hunger > 100) {
-            this.hunger = 100;
-          }
-          alert(
-            `${this.name} has aged! Age is now ${this.age}, Happiness is ${this.happiness}, Hunger is ${this.hunger}`
-          );
-        },
-
-        showStatus: function () {
-          alert(
-            `Name: ${this.name}\n Type: ${this.type}\n Age: ${this.age}\n Happiness: ${this.happiness}\n Hunger: ${this.hunger}`
-          );
-        },
-      };
-    </script>
+    <h1>My Virtual Pet</h1>
   </body>
 </html>
